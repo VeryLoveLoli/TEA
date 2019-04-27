@@ -37,7 +37,7 @@ public class TEA {
      
      - parameter    data:   数据
      */
-    func encrypt(_ data: Data) -> Data {
+    public func encrypt(_ data: Data) -> Data {
         
         var encryptData = data
         encryptData.encrypt(self)
@@ -50,7 +50,7 @@ public class TEA {
      
      - parameter    data:   数据
      */
-    func decrypt(_ data: Data) -> Data {
+    public func decrypt(_ data: Data) -> Data {
         
         var decryptData = data
         decryptData.decrypt(self)
@@ -66,7 +66,7 @@ public class TEA {
      - parameter    filePath:       文件路径
      - parameter    outFilePath:    输出加密文件路径
      */
-    func encrypt(_ filePath: String, outFilePath: String) {
+    public func encrypt(_ filePath: String, outFilePath: String) {
         
         if FileManager.default.createFile(outFilePath),
             let readFile = FileHandle.init(forReadingAtPath: filePath),
@@ -85,7 +85,7 @@ public class TEA {
      - parameter    filePath:       文件路径
      - parameter    outFilePath:    输出解密文件路径
      */
-    func decrypt(_ filePath: String, outFilePath: String) {
+    public func decrypt(_ filePath: String, outFilePath: String) {
         
         if FileManager.default.createFile(outFilePath),
             let readFile = FileHandle.init(forReadingAtPath: filePath),

@@ -23,14 +23,14 @@
      
      - parameter    data:   数据
      */
-    func encrypt(_ data: Data) -> Data 
+    public func encrypt(_ data: Data) -> Data 
     
     /**
      解密
      
      - parameter    data:   数据
      */
-    func decrypt(_ data: Data) -> Data 
+    public func decrypt(_ data: Data) -> Data 
         
     // MARK: File Crypt
     
@@ -40,7 +40,7 @@
      - parameter    filePath:       文件路径
      - parameter    outFilePath:    输出加密文件路径
      */
-    func encrypt(_ filePath: String, outFilePath: String)
+    public func encrypt(_ filePath: String, outFilePath: String)
     
     /**
      解密
@@ -48,7 +48,7 @@
      - parameter    filePath:       文件路径
      - parameter    outFilePath:    输出解密文件路径
      */
-    func decrypt(_ filePath: String, outFilePath: String)
+    public func decrypt(_ filePath: String, outFilePath: String)
 ```
 
 ```swift
