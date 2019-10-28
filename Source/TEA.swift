@@ -14,9 +14,9 @@ import Foundation
 public class TEA {
     
     /// 加解密位数 0~7 原型 (1<<number)
-    public let number: UInt32
+    fileprivate let number: UInt32
     /// 加解密KEY
-    public let key: (UInt32,UInt32,UInt32,UInt32)
+    fileprivate let key: (UInt32,UInt32,UInt32,UInt32)
     
     /**
      初始化
@@ -99,6 +99,7 @@ public class TEA {
     }
 }
 
+// MARK: - Data TEA
 
 fileprivate extension Data {
     
@@ -201,6 +202,8 @@ fileprivate extension Data {
         }
     }
 }
+
+// MARK: - FileHandle TEA
 
 fileprivate extension FileHandle {
     
